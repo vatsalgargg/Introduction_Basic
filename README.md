@@ -2,7 +2,7 @@
 
 > A modern, fully responsive personal portfolio site for a CSE student specialising in Cybersecurity & AI Engineering at BMS College of Engineering.
 
-🔗 **Live:** [vatsalgargg.github.io/Introduction_Basic](https://vatsalgargg.github.io/Introduction_Basic) *(or your deployed URL)*
+🔗 **Live:** [vatsalgargg.github.io/Introduction_Basic](https://vatsalgargg.github.io/Portfolio_Self) 
 
 ---
 
@@ -69,38 +69,6 @@ Introduction_Basic/
 | 4 | **Skills** | 9 cards — Cybersecurity, Programming, AI/ML, Databases, Tools, OSINT, Pentesting, Cloud, Core Competencies |
 | 5 | **Certifications** | BMSCE degree, ISC2 CC, Bug Bounty Practical |
 | 6 | **Contact** | Email, LinkedIn, GitHub, TryHackMe cards |
-
----
-
-## 🚀 Run Locally
-
-No build tools required — just a static file server:
-
-```bash
-# Python (built-in)
-python -m http.server 3000
-
-# Node.js (npx)
-npx serve .
-
-# VS Code
-# Install "Live Server" extension → right-click index.html → Open with Live Server
-```
-
-Then open [http://localhost:3000](http://localhost:3000).
-
----
-
-## 📱 Responsive Breakpoints
-
-| Breakpoint | Target |
-|---|---|
-| `≤ 1100px` | Tablets landscape |
-| `≤ 900px` | Tablets portrait — hero stacks, stats go 4-across |
-| `≤ 768px` | Large phones — hamburger nav, all grids single column |
-| `≤ 640px` | Mid phones — buttons grid, terminal compact |
-| `≤ 480px` | Small phones (iPhone SE) — single-column buttons, minimal terminal |
-| `≤ 360px` | Very small phones — typography scales down |
 
 ---
 
