@@ -4,42 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vatsal Garg — Cybersecurity Portfolio</title>
-  <meta name="description"
-    content="Computer Science Engineering Student specializing in cybersecurity and national security infrastructure protection.">
+  <title>Vatsal Garg — Cybersecurity & AI Engineer</title>
+  <meta name="description" content="CSE student at BMS College of Engineering specializing in cybersecurity, AI/ML engineering, and national security infrastructure protection.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Custom Cursor -->
-  <div id="cursor-dot"></div>
-  <div id="cursor-ring"></div>
 
   <!-- Scroll Progress -->
   <div id="scroll-bar"></div>
 
-  <!-- Canvas Layers -->
+  <!-- Matrix Canvas -->
   <canvas id="matrix"></canvas>
-  <canvas id="particles"></canvas>
 
   <!-- Navigation -->
-  <nav>
+  <nav id="navbar">
     <div class="nav-logo">&lt;VG/&gt;</div>
-    <ul class="nav-links">
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <div class="content">
+  <main class="content">
 
     <!-- ─── HERO ─────────────────────────────────────────── -->
     <section class="hero" id="hero">
-      <div class="hero-content">
-
+      <div class="hero-left">
         <div class="hero-badge">
           <span class="badge-dot"></span>
           Available for Internships &amp; Opportunities
@@ -48,121 +50,340 @@
         <h1 id="typing-text"></h1>
 
         <p class="hero-subtitle">
-          Computer Science Engineering Student &bull;
-          <span>Cybersecurity Enthusiast</span>
+          CSE @ BMS College of Engineering &bull;
+          <span>Cybersecurity &amp; AI</span>
         </p>
 
-        <div class="description-box">
-          <p>With a strong aptitude for <span class="highlight">independent research</span> and
-            <span class="highlight">quick learning</span>, I am deeply interested in
-            <span class="accent-highlight">national security</span> and motivated to move beyond
-            theoretical knowledge to help protect India's critical digital infrastructure.
-          </p>
-          <p>I am seeking a challenging <span class="highlight">internship</span> to apply my
-            problem-solving skills to real-world threats and contribute to a mission-driven team.</p>
+        <div class="tech-pills">
+          <span class="pill">Python</span>
+          <span class="pill">Kali Linux</span>
+          <span class="pill">TryHackMe Top 8%</span>
+          <span class="pill">ISC2 Certified</span>
+          <span class="pill">ML / Flask</span>
+          <span class="pill">OSINT</span>
         </div>
 
         <div class="buttons">
-          <a href="https://www.linkedin.com/in/vatsal-gargg" target="_blank" class="btn btn-primary">LinkedIn</a>
-          <a href="https://github.com/vatsalgargg" target="_blank" class="btn btn-outline">GitHub</a>
-          <a href="https://tryhackme.com/p/mrR0bOt" target="_blank" class="btn btn-outline">TryHackMe</a>
-          <a href="mailto:vatsalg80@gmail.com" class="btn btn-outline">Contact Me</a>
+          <a href="https://www.linkedin.com/in/vatsal-gargg" target="_blank" class="btn btn-primary" id="btn-linkedin">
+            <i data-lucide="linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/vatsalgargg" target="_blank" class="btn btn-outline" id="btn-github">
+            <i data-lucide="github"></i> GitHub
+          </a>
+          <a href="https://tryhackme.com/p/mrR0bOt" target="_blank" class="btn btn-outline" id="btn-thm">
+            <i data-lucide="shield"></i> TryHackMe
+          </a>
+          <a href="mailto:vatsalg80@gmail.com" class="btn btn-outline" id="btn-email">
+            <i data-lucide="mail"></i> Email Me
+          </a>
         </div>
-
       </div>
 
-      <div class="float-decoration float-1"></div>
-      <div class="float-decoration float-2"></div>
-      <div class="float-decoration float-3"></div>
+      <div class="hero-right">
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <span class="t-dot t-red"></span>
+            <span class="t-dot t-yellow"></span>
+            <span class="t-dot t-green"></span>
+            <span class="t-title">vatsal@kali ~ $</span>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="t-line"><span class="t-prompt">❯</span> <span class="t-cmd">whoami</span></div>
+            <div class="t-output">vatsal_garg</div>
+            <div class="t-line"><span class="t-prompt">❯</span> <span class="t-cmd">cat profile.txt</span></div>
+            <div class="t-output t-multi">
+              <span class="t-key">Role:</span> CSE Student, BMSCE<br>
+              <span class="t-key">Focus:</span> Cybersecurity &amp; AI Engineering<br>
+              <span class="t-key">Cert:</span> ISC2 Certified in Cybersecurity<br>
+              <span class="t-key">Rank:</span> TryHackMe Top 8%<br>
+              <span class="t-key">Location:</span> Bengaluru, Karnataka
+            </div>
+            <div class="t-line"><span class="t-prompt">❯</span> <span class="t-cmd">ls skills/</span></div>
+            <div class="t-output t-ls">
+              <span>penetration_testing</span>
+              <span>osint_frameworks</span>
+              <span>ml_engineering</span>
+              <span>network_security</span>
+              <span>docker_cloudrun</span>
+            </div>
+            <div class="t-line"><span class="t-prompt">❯</span> <span class="t-cmd blink-cursor">_</span></div>
+          </div>
+        </div>
+        <div class="float-decoration float-1"></div>
+        <div class="float-decoration float-2"></div>
+      </div>
     </section>
 
+    <!-- ─── ABOUT ─────────────────────────────────────────── -->
+    <section class="about" id="about">
+      <div class="about-inner">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm a <span class="hl">Computer Science Engineering</span> student at BMS College of Engineering with hands-on experience in <span class="hl">Python automation</span>, REST API integration, and AI-assisted engineering.</p>
+            <p>I've built and deployed a production ML platform connecting 3 live data systems — zero manual intervention. Security-certified by <span class="hl-accent">ISC2</span>, with a passion for protecting India's critical digital infrastructure.</p>
+            <p>I thrive at the intersection of <span class="hl">AI engineering</span> and <span class="hl-accent">offensive security</span> — building reliable systems while probing them for weaknesses.</p>
+          </div>
+          <div class="stats-bento reveal">
+            <div class="stat-card">
+              <i data-lucide="shield-check"></i>
+              <div class="stat-num">ISC2</div>
+              <div class="stat-label">Certified</div>
+            </div>
+            <div class="stat-card">
+              <i data-lucide="trophy"></i>
+              <div class="stat-num">Top 8%</div>
+              <div class="stat-label">TryHackMe</div>
+            </div>
+            <div class="stat-card">
+              <i data-lucide="layers"></i>
+              <div class="stat-num">2+</div>
+              <div class="stat-label">Deployed Projects</div>
+            </div>
+            <div class="stat-card">
+              <i data-lucide="cpu"></i>
+              <div class="stat-num">12k+</div>
+              <div class="stat-label">ML Training Samples</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROJECTS ──────────────────────────────────────── -->
+    <section class="projects" id="projects">
+      <div class="projects-inner">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="projects-grid">
+
+          <article class="project-card reveal" style="--delay:0.1s">
+            <div class="project-header">
+              <div class="project-icon"><i data-lucide="sprout"></i></div>
+              <div class="project-links">
+                <a href="#" target="_blank" aria-label="View live"><i data-lucide="external-link"></i></a>
+                <a href="https://github.com/vatsalgargg" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+              </div>
+            </div>
+            <h3>Soil Sage</h3>
+            <p class="project-subtitle">AI Precision Agriculture Platform</p>
+            <p class="project-desc">Trained a Random Forest ML model on 12,000+ samples deployed as a Flask REST API with 100% uptime via rule-based fallback. Integrated 3 live APIs (Open-Meteo, AGMARKNET, Supabase) with zero manual data entry.</p>
+            <div class="project-tags">
+              <span>Python</span><span>Flask</span><span>scikit-learn</span><span>Next.js</span><span>Supabase</span><span>Render</span>
+            </div>
+            <div class="project-badge"><i data-lucide="zap"></i> Production Deployed</div>
+          </article>
+
+          <article class="project-card reveal featured-card" style="--delay:0.2s">
+            <div class="project-header">
+              <div class="project-icon"><i data-lucide="search-check"></i></div>
+              <div class="project-links">
+                <a href="#" target="_blank" aria-label="View live"><i data-lucide="external-link"></i></a>
+                <a href="https://github.com/vatsalgargg" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+              </div>
+            </div>
+            <h3>InternShield</h3>
+            <p class="project-subtitle">Forensic Intelligence Engine</p>
+            <p class="project-desc">Recruitment scam detection platform using real-time SSL auditing, WHOIS analysis, and document metadata forensics. Dockerized on Google Cloud Run with MIME-sniffing, XSS sanitization, and strict CSP headers.</p>
+            <div class="project-tags">
+              <span>Python</span><span>Django</span><span>Docker</span><span>GCP</span><span>OSINT</span>
+            </div>
+            <div class="project-badge security"><i data-lucide="shield"></i> Security Tool</div>
+          </article>
+
+          <article class="project-card reveal" style="--delay:0.3s">
+            <div class="project-header">
+              <div class="project-icon"><i data-lucide="flag"></i></div>
+              <div class="project-links">
+                <a href="https://tryhackme.com/p/mrR0bOt" target="_blank" aria-label="TryHackMe profile"><i data-lucide="external-link"></i></a>
+              </div>
+            </div>
+            <h3>CTF & Pentesting</h3>
+            <p class="project-subtitle">TryHackMe · Ethical Hacking</p>
+            <p class="project-desc">Active on TryHackMe, ranking in the top 8% globally. Completed rooms covering network exploitation, privilege escalation, web vulnerabilities, and OSINT methodologies.</p>
+            <div class="project-tags">
+              <span>Kali Linux</span><span>Nmap</span><span>OSINT</span><span>Burp Suite</span>
+            </div>
+            <div class="project-badge"><i data-lucide="award"></i> Top 8% Global</div>
+          </article>
+
+        </div>
+      </div>
+    </section>
 
     <!-- ─── SKILLS ────────────────────────────────────────── -->
     <section class="skills" id="skills">
       <div class="skills-container">
-        <h2 class="section-title">Areas of <span>Interest</span></h2>
-
+        <h2 class="section-title">Areas of <span>Expertise</span></h2>
         <div class="skills-grid">
 
-          <div class="skill-card" style="animation-delay:0.1s">
-            <span class="skill-icon">🛡️</span>
+          <div class="skill-card reveal" style="--delay:0.1s">
+            <div class="skill-icon-wrap"><i data-lucide="shield"></i></div>
             <h3>Cybersecurity</h3>
-            <p>Digital infrastructure protection &amp; threat analysis</p>
-
+            <p>Digital infrastructure protection, threat analysis &amp; CTF competitions</p>
+            <div class="skill-tags"><span>Kali Linux</span><span>NMAP</span><span>OSINT</span><span>Computer Networking</span></div>
           </div>
 
-          <div class="skill-card" style="animation-delay:0.2s">
-            <span class="skill-icon">🔬</span>
-            <h3>Security Research</h3>
-            <p>Independent research on vulnerabilities &amp; exploits</p>
-
+          <div class="skill-card reveal" style="--delay:0.2s">
+            <div class="skill-icon-wrap"><i data-lucide="code-2"></i></div>
+            <h3>Programming Languages</h3>
+            <p>Multi-language developer with strong fundamentals in systems and web programming</p>
+            <div class="skill-tags"><span>Python</span><span>Java</span><span>C</span><span>SQL</span><span>HTML5</span><span>CSS</span></div>
           </div>
 
-          <div class="skill-card" style="animation-delay:0.3s">
-            <span class="skill-icon">🌐</span>
-            <h3>Network Security</h3>
-            <p>Infrastructure hardening &amp; network defense</p>
-
+          <div class="skill-card reveal" style="--delay:0.3s">
+            <div class="skill-icon-wrap"><i data-lucide="brain"></i></div>
+            <h3>AI / ML Engineering</h3>
+            <p>Production ML pipelines, REST APIs, and AI-assisted engineering at scale</p>
+            <div class="skill-tags"><span>scikit-learn</span><span>Flask</span><span>REST APIs</span><span>Prompt Engineering</span></div>
           </div>
 
-          <div class="skill-card" style="animation-delay:0.4s">
-            <span class="skill-icon">🔐</span>
-            <h3>Data Protection</h3>
-            <p>Encryption &amp; secure data management</p>
-
+          <div class="skill-card reveal" style="--delay:0.4s">
+            <div class="skill-icon-wrap"><i data-lucide="database"></i></div>
+            <h3>Databases</h3>
+            <p>Relational and cloud-hosted databases for production applications</p>
+            <div class="skill-tags"><span>MySQL</span><span>Supabase</span><span>SQL</span></div>
           </div>
 
-          <div class="skill-card" style="animation-delay:0.5s">
-            <span class="skill-icon">🐧</span>
-            <h3>System Administration</h3>
-            <p>Linux systems &amp; security operations</p>
-
+          <div class="skill-card reveal" style="--delay:0.5s">
+            <div class="skill-icon-wrap"><i data-lucide="wrench"></i></div>
+            <h3>Tools &amp; Technologies</h3>
+            <p>Industry-standard tooling for development, security, and deployment workflows</p>
+            <div class="skill-tags"><span>Git</span><span>GitHub</span><span>Cloudflare</span><span>Docker</span><span>NMAP</span></div>
           </div>
 
-          <div class="skill-card" style="animation-delay:0.6s">
-            <span class="skill-icon">⚡</span>
+          <div class="skill-card reveal" style="--delay:0.6s">
+            <div class="skill-icon-wrap"><i data-lucide="search"></i></div>
+            <h3>OSINT &amp; Forensics</h3>
+            <p>Open-source intelligence gathering, digital forensics &amp; metadata analysis</p>
+            <div class="skill-tags"><span>WHOIS</span><span>Shodan</span><span>SSL Auditing</span><span>Metadata</span></div>
+          </div>
+
+          <div class="skill-card reveal" style="--delay:0.7s">
+            <div class="skill-icon-wrap"><i data-lucide="terminal"></i></div>
             <h3>Penetration Testing</h3>
-            <p>Ethical hacking, CTFs &amp; offensive security</p>
+            <p>Ethical hacking, privilege escalation, web app &amp; network pentesting</p>
+            <div class="skill-tags"><span>Burp Suite</span><span>Metasploit</span><span>SQLmap</span><span>TryHackMe Top 8%</span></div>
+          </div>
 
+          <div class="skill-card reveal" style="--delay:0.8s">
+            <div class="skill-icon-wrap"><i data-lucide="container"></i></div>
+            <h3>Cloud &amp; Deployment</h3>
+            <p>Container-based deployments across major cloud platforms with CI/CD</p>
+            <div class="skill-tags"><span>Google Cloud Run</span><span>Vercel</span><span>Render</span><span>Supabase</span></div>
+          </div>
+
+          <div class="skill-card reveal" style="--delay:0.9s">
+            <div class="skill-icon-wrap"><i data-lucide="lightbulb"></i></div>
+            <h3>Core Competencies</h3>
+            <p>Soft skills and mindset that drive high-quality, mission-driven engineering</p>
+            <div class="skill-tags"><span>Security Research</span><span>Problem Solving</span><span>Adaptation</span><span>Attention to Detail</span></div>
           </div>
 
         </div>
       </div>
     </section>
 
+    <!-- ─── CERTIFICATIONS ────────────────────────────────── -->
+    <section class="certs" id="certs">
+      <div class="certs-inner">
+        <h2 class="section-title">Certifications &amp; <span>Education</span></h2>
+        <div class="certs-grid">
+          <div class="cert-card reveal">
+            <div class="cert-icon"><i data-lucide="graduation-cap"></i></div>
+            <div>
+              <h3>B.E. Computer Science</h3>
+              <p class="cert-org">BMS College of Engineering, Bengaluru</p>
+              <span class="cert-year">2024 – 2028</span>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <div class="cert-icon cert-blue"><i data-lucide="award"></i></div>
+            <div>
+              <h3>Certified in Cybersecurity</h3>
+              <p class="cert-org">ISC2</p>
+              <span class="cert-year">Certified</span>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <div class="cert-icon cert-purple"><i data-lucide="bug"></i></div>
+            <div>
+              <h3>Bug Bounty Practical 1.0</h3>
+              <p class="cert-org">Cywer Learning</p>
+              <span class="cert-year">Certified</span>
+            </div>
+          </div>
 
+        </div>
+      </div>
+    </section>
 
     <!-- ─── CONTACT ────────────────────────────────────────── -->
     <section class="contact" id="contact">
       <div class="contact-inner">
         <h2 class="section-title">Let's <span>Connect</span></h2>
-        <p>Open to internships, research collaborations, and any mission-driven opportunities in cybersecurity &amp;
-          national security.</p>
-        <div class="contact-links">
-          <a href="mailto:vatsalg80@gmail.com" class="btn btn-primary">Send an Email</a>
-          <a href="https://www.linkedin.com/in/vatsal-gargg" target="_blank" class="btn btn-outline">LinkedIn</a>
-          <a href="https://github.com/vatsalgargg" target="_blank" class="btn btn-outline">GitHub</a>
-          <a href="https://tryhackme.com/p/mrR0bOt" target="_blank" class="btn btn-outline">TryHackMe</a>
+        <p>Open to internships, research collaborations, and mission-driven opportunities in cybersecurity &amp; national security.</p>
+        <div class="contact-cards">
+          <a href="mailto:vatsalg80@gmail.com" class="contact-card reveal">
+            <i data-lucide="mail"></i>
+            <div>
+              <span class="cc-label">Email</span>
+              <span class="cc-value">vatsalg80@gmail.com</span>
+            </div>
+            <i data-lucide="arrow-right" class="cc-arrow"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/vatsal-gargg" target="_blank" class="contact-card reveal">
+            <i data-lucide="linkedin"></i>
+            <div>
+              <span class="cc-label">LinkedIn</span>
+              <span class="cc-value">vatsal-gargg</span>
+            </div>
+            <i data-lucide="arrow-right" class="cc-arrow"></i>
+          </a>
+          <a href="https://github.com/vatsalgargg" target="_blank" class="contact-card reveal">
+            <i data-lucide="github"></i>
+            <div>
+              <span class="cc-label">GitHub</span>
+              <span class="cc-value">vatsalgargg</span>
+            </div>
+            <i data-lucide="arrow-right" class="cc-arrow"></i>
+          </a>
+          <a href="https://tryhackme.com/p/mrR0bOt" target="_blank" class="contact-card reveal">
+            <i data-lucide="shield"></i>
+            <div>
+              <span class="cc-label">TryHackMe</span>
+              <span class="cc-value">mrR0bOt · Top 8%</span>
+            </div>
+            <i data-lucide="arrow-right" class="cc-arrow"></i>
+          </a>
         </div>
       </div>
     </section>
 
-  </div><!-- /.content -->
+  </main>
 
   <footer>
-    <p>Built with <span>&#10084;</span> by Vatsal Garg &bull; <span>2025</span></p>
+    <div class="footer-inner">
+      <div class="footer-logo">&lt;VG/&gt;</div>
+      <p>Built with <span>♥</span> by Vatsal Garg · <span>2025</span></p>
+      <div class="footer-links">
+        <a href="https://github.com/vatsalgargg" target="_blank"><i data-lucide="github"></i></a>
+        <a href="https://www.linkedin.com/in/vatsal-gargg" target="_blank"><i data-lucide="linkedin"></i></a>
+        <a href="https://tryhackme.com/p/mrR0bOt" target="_blank"><i data-lucide="shield"></i></a>
+      </div>
+    </div>
   </footer>
 
   <script>
-    /* ─── Matrix Rain ──────────────────────────────────────────── */
+    /* ─── Init Lucide Icons ─────────────────────────────── */
+    lucide.createIcons();
+
+    /* ─── Matrix Rain ──────────────────────────────────── */
     (function () {
       const canvas = document.getElementById('matrix');
       const ctx = canvas.getContext('2d');
-      let cols;
-      let drops;
-      const letters = '01$#%&*{}[]<>/\\=+~アイウエオカキクケコサシスセソ';
-      const fontSize = 14;
-
+      let cols, drops;
+      const letters = '01$#%&*{}[]<>/\\=+~アイウエオカキクケコ';
+      const fontSize = 13;
       function resize() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -171,9 +392,9 @@
       }
       resize();
       window.addEventListener('resize', resize);
-
-      function drawMatrix() {
-        ctx.fillStyle = 'rgba(0,5,15,0.07)';
+      function draw() {
+        if (document.hidden) return;
+        ctx.fillStyle = 'rgba(0,5,15,0.06)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = '#4db8ff';
         ctx.font = fontSize + 'px monospace';
@@ -184,112 +405,38 @@
           drops[x]++;
         });
       }
-      setInterval(drawMatrix, 35);
+      setInterval(draw, 40);
     })();
 
-    /* ─── Particle Trail ───────────────────────────────────────── */
-    (function () {
-      const canvas = document.getElementById('particles');
-      const ctx = canvas.getContext('2d');
-      let W = canvas.width = window.innerWidth;
-      let H = canvas.height = window.innerHeight;
-      window.addEventListener('resize', () => {
-        W = canvas.width = window.innerWidth;
-        H = canvas.height = window.innerHeight;
-      });
 
-      const pool = [];
-      let mouse = { x: null, y: null, lastX: null, lastY: null };
 
-      class Particle {
-        constructor(x, y) {
-          this.x = x; this.y = y;
-          this.baseSize = Math.random() * 3 + 1.5;
-          this.size = this.baseSize;
-          this.alpha = 1;
-          this.decay = Math.random() * 0.018 + 0.008;
-          const angle = Math.random() * Math.PI * 2;
-          const speed = Math.random() * 0.6 + 0.2;
-          this.vx = Math.cos(angle) * speed;
-          this.vy = Math.sin(angle) * speed;
-          this.hue = 190 + Math.random() * 30;
-        }
-        update() { this.vx *= 0.97; this.vy *= 0.97; this.x += this.vx; this.y += this.vy; this.alpha -= this.decay; this.size = this.baseSize * this.alpha; }
-        draw() {
-          if (this.alpha <= 0) return;
-          const g = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 2.5);
-          g.addColorStop(0, `hsla(${this.hue},100%,80%,${this.alpha})`);
-          g.addColorStop(0.5, `hsla(${this.hue},100%,70%,${this.alpha * 0.4})`);
-          g.addColorStop(1, `hsla(${this.hue},100%,60%,0)`);
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.size * 2.5, 0, Math.PI * 2);
-          ctx.fillStyle = g;
-          ctx.fill();
-        }
-      }
-
-      function loop() {
-        ctx.fillStyle = 'rgba(0,5,15,0.18)';
-        ctx.fillRect(0, 0, W, H);
-        for (let i = pool.length - 1; i >= 0; i--) {
-          pool[i].update();
-          pool[i].draw();
-          if (pool[i].alpha <= 0) pool.splice(i, 1);
-        }
-        requestAnimationFrame(loop);
-      }
-      loop();
-
-      window.addEventListener('mousemove', e => {
-        mouse.lastX = mouse.x; mouse.lastY = mouse.y;
-        mouse.x = e.clientX; mouse.y = e.clientY;
-        if (mouse.lastX !== null) {
-          const dx = mouse.x - mouse.lastX;
-          const dy = mouse.y - mouse.lastY;
-          const steps = Math.ceil(Math.sqrt(dx * dx + dy * dy) / 10);
-          for (let i = 0; i < steps; i++) {
-            const t = i / steps;
-            const px = mouse.lastX + dx * t;
-            const py = mouse.lastY + dy * t;
-            pool.push(new Particle(px, py));
-            pool.push(new Particle(px, py));
-          }
-        }
-        if (pool.length > 350) pool.splice(0, pool.length - 350);
-      });
-    })();
-
-    /* ─── Custom Cursor ────────────────────────────────────────── */
-    (function () {
-      const dot = document.getElementById('cursor-dot');
-      const ring = document.getElementById('cursor-ring');
-      let rx = 0, ry = 0;
-      window.addEventListener('mousemove', e => {
-        dot.style.left = e.clientX + 'px';
-        dot.style.top = e.clientY + 'px';
-        // Smooth ring lag
-        requestAnimationFrame(() => {
-          rx += (e.clientX - rx) * 0.18;
-          ry += (e.clientY - ry) * 0.18;
-          ring.style.left = rx + 'px';
-          ring.style.top = ry + 'px';
-        });
-      });
-      // Smooth loop for ring
-      (function moveRing() {
-        requestAnimationFrame(moveRing);
-        // ring follows with CSS transitions, nothing extra needed
-      })();
-    })();
-
-    /* ─── Scroll Progress Bar ──────────────────────────────────── */
+    /* ─── Scroll Progress ───────────────────────────────── */
     window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop;
-      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      document.getElementById('scroll-bar').style.width = (scrollTop / docHeight * 100) + '%';
+      const st = document.documentElement.scrollTop;
+      const dh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      document.getElementById('scroll-bar').style.width = (st / dh * 100) + '%';
     });
 
-    /* ─── Typing Animation ─────────────────────────────────────── */
+    /* ─── Navbar scroll style ───────────────────────────── */
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* ─── Mobile hamburger ──────────────────────────────── */
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    /* ─── Typing Animation ──────────────────────────────── */
     (function () {
       const el = document.getElementById('typing-text');
       const text = 'Vatsal Garg';
@@ -297,51 +444,27 @@
       function type() {
         if (i < text.length) {
           el.innerHTML = text.substring(0, ++i) + '<span class="cursor"></span>';
-          setTimeout(type, Math.random() * 100 + 75);
+          setTimeout(type, Math.random() * 100 + 70);
         } else {
           el.innerHTML = text + '<span class="cursor"></span>';
         }
       }
-      setTimeout(type, 600);
+      setTimeout(type, 700);
     })();
 
-    /* ─── Counter Animation ────────────────────────────────────── */
+    /* ─── Scroll Reveal ─────────────────────────────────── */
     (function () {
-      const counters = document.querySelectorAll('.stat-number');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          const el = entry.target;
-          const target = parseInt(el.dataset.target);
-          let current = 0;
-          const step = Math.ceil(target / 50);
-          const timer = setInterval(() => {
-            current = Math.min(current + step, target);
-            el.textContent = current + (el.dataset.target === '100' ? '%' : '+');
-            if (current >= target) clearInterval(timer);
-          }, 35);
-          observer.unobserve(el);
-        });
-      }, { threshold: 0.5 });
-      counters.forEach(c => observer.observe(c));
-    })();
-
-
-
-    /* ─── Scroll Reveal ────────────────────────────────────────── */
-    (function () {
-      const items = document.querySelectorAll('.skill-card, .stat-card, .timeline-item, .description-box');
-      const observer = new IntersectionObserver(entries => {
+      const obs = new IntersectionObserver(entries => {
         entries.forEach(e => {
-          if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
+          if (e.isIntersecting) {
+            const delay = e.target.style.getPropertyValue('--delay') || '0s';
+            e.target.style.transitionDelay = delay;
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
         });
-      }, { threshold: 0.15 });
-      items.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-        observer.observe(el);
-      });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
     })();
   </script>
 </body>
