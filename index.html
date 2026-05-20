@@ -364,7 +364,7 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">&lt;VG/&gt;</div>
-      <p>Built with <span>♥</span> by Vatsal Garg · <span>2025</span></p>
+      <p>Built with <span>♥</span> by Vatsal Garg · <span id="footer-year">2026</span></p>
       <div class="footer-links">
         <a href="https://github.com/vatsalgargg" target="_blank"><i data-lucide="github"></i></a>
         <a href="https://www.linkedin.com/in/vatsal-gargg" target="_blank"><i data-lucide="linkedin"></i></a>
@@ -466,6 +466,9 @@
       }, { threshold: 0.12 });
       document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
     })();
+
+    /* ─── Dynamic Footer Year ───────────────────────────── */
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
   </script>
 </body>
 
